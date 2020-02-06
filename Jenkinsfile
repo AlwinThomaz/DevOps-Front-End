@@ -15,7 +15,7 @@ pipeline {
         }
        stage('--ssh--') {
           steps {
-            	sh "ssh -T -i /home/jenkins/front-end.pem jenkins@3.11.97.214"
+            	sh "ssh -T -i /home/jenkins/front-end.pem ec2-3-10-227-78.eu-west-2.compute.amazonaws.com"
             }
         }
         
