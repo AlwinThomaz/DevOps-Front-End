@@ -3,13 +3,13 @@ pipeline {
     stages {
        stage('--docker-build--') {
           steps {
-            sh 'docker build -t alwinthomas/app-frontend-master .'
+            sh 'docker build -t alwinthomas/app-frontend-master:prod .'
           }
         }
        stage('--docker-publish--') {
           steps {
               withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-              sh 'docker push alwinthomas/app-frontend-master:latest'
+              sh 'docker push alwinthomas/app-frontend-master:prod'
               }
           }
         }
