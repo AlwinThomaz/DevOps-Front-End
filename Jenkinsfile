@@ -15,7 +15,7 @@ pipeline {
         }
        stage('--ssh--') {
           steps {
-            	sh "ssh -T -i /home/jenkins/front-end.pem ubuntu@ec2-3-10-227-78.eu-west-2.compute.amazonaws.com ./front-end-install.sh ./front-end-selenium.sh"
+            	sh "ssh -T -i /home/jenkins/front-end.pem ubuntu@ec2-3-10-227-78.eu-west-2.compute.amazonaws.com ./front-end-install.sh; ./front-end-selenium.sh"
             }
         }
         
