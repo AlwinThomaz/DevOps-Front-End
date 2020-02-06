@@ -23,7 +23,7 @@ pipeline {
 	stage('--ssh production--') {
           steps {
 
-            	sh "ssh -T -i /home/jenkins/master.pem ec2-18-130-182-11.eu-west-2.compute.amazonaws.com ./FE-Prod.sh "
+            	sh "ssh -T -i /home/jenkins/master.pem ubuntu@ec2-18-130-182-11.eu-west-2.compute.amazonaws.com ./FE-Prod.sh"
             }
         }
 
